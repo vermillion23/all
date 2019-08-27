@@ -8,11 +8,16 @@ const textExampleElement = document.querySelector('#textExample')
 const lines = getLines(text) 
    
 let letterId = 1
+
 update()
 
 lineToHtml(lines[0])
 
 inputElement.addEventListener ('keydown', function (event) {
+    console.log(event)
+    const element = document.querySelector('[data-key="' + event.key +'"]')
+    element.classList.add('hint')
+
     const CurrentLetter = getCurrentLetter()
 
     if (event.key === CurrentLetter.label) {
@@ -20,6 +25,12 @@ inputElement.addEventListener ('keydown', function (event) {
         update()
     }
 })
+
+inputElement.addEventListener('keyup', function (event) {
+    const element = document.querySelector('[data-key="' + event.key +'"]')
+    element.classList.remove('hint')
+})
+
 
 // Принимает длинную строку, возвращает массив строк со служебной информацией
 function getLines(text){
@@ -107,6 +118,9 @@ function update () {
     }
 }
 
+//Реализовать обработчика событий keydown и с использованием ф-ий getLines(), lineToHtml(), getCurrentLineNumber(), 
+//update() и getCurrentLetter().
+
 //Возвращает объект  символа ожидаемый программой
 function getCurrentLetter () {
     for (const line of lines) {
@@ -116,4 +130,8 @@ function getCurrentLetter () {
             }
         }
     }
+}
+
+function keydown () {
+
 }
