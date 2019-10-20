@@ -118,7 +118,7 @@ function update () {
     }
 }
 
-//Реализовать обработчика событий keydown и с использованием ф-ий getLines(), lineToHtml(), getCurrentLineNumber(), 
+//Реализовать обработчик событий keydown и с использованием ф-ий getLines(), lineToHtml(), getCurrentLineNumber(), 
 //update() и getCurrentLetter().
 
 //Возвращает объект  символа ожидаемый программой
