@@ -1,0 +1,384 @@
+*{
+  box-sizing: border-box;
+  border: 1px solid red;
+
+}
+
+body {
+  background-color: #F8F7F3;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.logo_block {
+  height: 100%;
+  /* max-width: 100%; */
+    
+  background: url("../images/background_pic1.svg") top center;
+  /* background-repeat: no-repeat; */
+  /* background-position: ; */
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: space-around; */
+    
+  /* position: relative; */
+
+  color: #075778;
+  font-weight: 400;
+  font-size: 36px;
+  text-align: center; 
+  letter-spacing: 0.05em;
+
+}
+
+.logo_image {
+  margin-top: 15%;
+  margin-left:auto;
+  margin-right: auto;
+}
+
+.mobile_logo {
+  display: none;
+}
+
+@media (max-width: 661px) {
+  .main_logo {
+    display: none;
+  }
+
+  .mobile_logo {
+    margin-left:auto;
+    margin-right: auto;
+    display: block;
+   
+  }
+  .title-text, .container-text {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  /* {
+    font-size: 24px;
+    line-height: 28px;
+
+  } */
+}
+
+.title_text, .text {
+  font-size: 36px;
+  line-height: 48px;
+  width: 60%;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3%;
+}
+
+.features {
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* justify-content: space-around; */
+  /* Как можно регулировать расстояние между features и features-picture? */
+  align-items: center;
+  
+  color: #075778;
+  font-weight: 400;
+  font-size: 24px;
+
+}
+
+/* .features-content {
+  margin-left: 10%;
+} */
+
+.title {
+  max-width: 100%;
+  margin-top: 10%;
+
+  /* height: 56px;
+  margin-bottom: 106px; */
+  
+  font-weight: 700;
+  font-size: 48px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #FF5657;
+      
+}
+
+.features-text {
+  
+  width: 100%;
+  height: 20%;
+  margin-top: 15%;
+
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0.05em;
+     
+}
+
+.features-picture {
+  margin-top: 3%; 
+
+}
+
+.mobile_features {
+  display: none;
+}
+
+@media (max-width: 661px) {
+  .title {
+    font-size: 24px;
+    line-height: 28px;
+    /* margin-top: 25%; */
+    /* Нужно сделать маргин только в мобильной версии, в десктопной поднять
+     текст немного */
+  }
+  .features-text {
+    font-size: 18px;
+    line-height: 21px;
+    margin-top: none;
+  }
+ 
+  .main_features {
+    display: none;
+  }
+
+  .mobile_features {
+    margin-left:auto;
+    margin-right: auto;
+    display: block;
+    border-image-width: 100%;
+   
+  }
+}
+
+.platforms {
+  /* width: 100%;
+  height: 100%; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+  margin-left: auto;
+  margin-right: auto;
+  
+  color: #075778;
+  font-weight: 400;
+  font-size: 24px;
+  letter-spacing: 0.05em;
+
+}
+
+.platforms_title {
+  max-width: 100%;
+  height: 100%;
+  margin-top: 10%;
+  margin-left: 15%;
+  margin-right: 15%;
+  
+  /* font-weight: 700;
+  font-size: 48px;
+  line-height: 56px; 
+  text-transform: uppercase;
+  color: #FF5657;
+  letter-spacing: 0.05em; */
+}
+
+.platforms_text {
+  
+  /* width: 100%;
+  height: 100%; */
+  margin-left: 15%;
+  margin-right: 15%;
+
+  margin-top: 10%;
+  /* top: 1772px; */
+  
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.05em;
+}
+
+.platforms_background {
+  margin-top: 3%;
+  width: 100%;
+  
+  background-color: E5E5E5;
+  object-fit: cover;
+  width: 100%;
+
+}
+
+
+@media (max-width: 661px) {
+  /* .features-title {
+    font-size: 24px;
+    line-height: 28px;
+  } */
+  .platforms-text {
+    font-size: 18px;
+    line-height: 21px;
+  }
+}
+
+.user-flow-title {
+  margin-left: 12%;
+  margin-bottom: 5%;
+  max-width: 20%;
+/*  
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+  text-transform: uppercase;
+  color: #FF5657;
+  letter-spacing: 0.05em; */
+}
+
+.user-flow {
+      
+  /* max-width: 1152px;
+  height: 260px;  */
+  margin-left: auto;
+  margin-right: auto;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+}
+/* 
+.personal-data {
+  width: 100%;
+
+  margin-left: auto;
+  margin-right: auto;
+
+} */
+  
+.personal-data-text {
+  width: 40%;
+  /* height: 144px; */
+ 
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0.05em;
+  color: #075778;
+}
+
+.personal-data-image {
+  object-fit: cover;
+  /* width: 40%;
+  height: auto; */
+  /* left: 966px;
+  top: 3292px;  */
+
+}
+
+/* .test {
+
+
+  max-width: 1152px;
+  height: 517px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+
+} */
+
+.test-text{
+  
+  width: 40%;
+  height: auto;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+
+  text-align: right;
+  letter-spacing: 0.05em;
+  color: #075778;
+
+}
+
+.test-image{
+  width: 40%;
+  height: auto;
+ 
+}
+
+/* .feedback {
+  max-width: 1152px;
+  height: 517px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+
+} */
+
+.feedback-text{
+  
+  width: 40%;
+  height: auto;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+
+  letter-spacing: 0.05em;
+  color: #075778;
+
+}
+
+.test-image{
+  width: 40%;
+  height: auto;
+ 
+}
+
+/* .statistics {
+  max-width: 1152px;
+  height: 517px;
+
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+
+} */
+
+.statistics-text{
+  
+  width: 40%;
+  height: auto;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+
+  text-align: right;
+  letter-spacing: 0.05em;
+  color: #075778;
+
+}
+
+.statistics-image{
+  width: 40%;
+  height: auto;
+ 
+}

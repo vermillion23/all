@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <script type="" src=""> </script>
+
+    <!-- <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initiale-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+
+    <link href="css/styles_reset.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <title>Balancd</title>
+
+</head>
+
+<body>
+
+
+    <div class="logo_block">
+        <div class="logo_image">
+            <img src="images/logo.svg" alt="" class="main_logo">
+            <img src="images/mobile-logo.svg" alt="" class="mobile_logo">
+        </div>
+
+        <div class="title_text">
+            Индивидуальная программа тренировок для пожилых людей
+        </div>
+
+        <!-- Чем див отличается от p?? -->
+
+        <div class="text">
+            Приложение для китайского стартапа. Удобное для пожилого пользователя фитнес приложение для занятий
+            фитнесом дома(китайская гимнастика Тайцзи и Цигун) с индивидуальной программой тренировок, видеоуроками
+            и фитнес тестами для отслеживания своего прогресса.
+        </div>
+
+    </div>
+
+
+    <div class="features">
+        <div class="features-content">
+            <h2 class="features-title title">
+                Функционал
+            </h2>
+            <div class="features-text">
+                <br>Пройти тестирование
+                <br>Выбрать программу тренировки
+                <br>Уведомление о тренировке
+                <br>Поделиться в Facebook
+                <br>Facebook webview
+            </div>
+        </div>
+        <div class="features-picture">
+            <img src="images/screens collection 1.svg" class="main_features">
+            <img src="images/features-mobile.svg" class="mobile_features">
+        </div>
+    </div>
+
+
+    <div class="platforms">
+        <h2 class="platforms_title title">
+            Платформы
+        </h2>
+        <div class="platforms_text">
+            Система состоит из двух нативных приложений (iOS, Android) и веб-версии для администратора, где
+            осуществляется управление упражнениями и курсами тренировок и отображается статистика по прогрессу
+            пользователей
+        </div>
+    </div>
+
+    <div class="picture_platforms">
+        <!-- <img src="images/plarforms_background.svg" class="main_features">
+        <img src="images/platforms_mobile.svg" class="mobile_features"> -->
+
+        <source media="(max-width: 661px)" srcset="images/platforms_mobile.png">
+        <img class="platforms_background" src="images/plarforms_background.svg">
+
+    </div>
+
+    <h2 class="user-flow-title title">
+        USER FLOW
+    </h2>
+
+    <div class="user-flow">
+
+
+        <div class="personal-data-text">
+            Пользователь заполняет свои персональные данные (пол, возраст, местоположение, образ жизни и количество
+            тренировок в неделю).
+        </div>
+
+        <div>
+            <img src="/images/personal_data.svg" class="personal-data-image">
+        </div>
+
+
+        <div class="test">
+            <div class="test-image">
+                <img src="/images/test.svg">
+            </div>
+            <div class="test-text">
+                Затем пользователь проходит тестирование, чтобы приложение могло подобрать для него лучшую систему
+                тренировок. Есть два режима упражнений (Шаолинь и Бадьяндзинь) и разные уровни сложного для каждого из
+                них.
+                Упражнения включают видеоуроки и текстовое описание.
+            </div>
+
+
+        </div>
+
+        <div class="feedback">
+            <div class="feedback-text">
+                После тренировки пользователю предлагается оставить свой фидбек о степени сложности упражнений.
+            </div>
+
+            <div>
+                <img src="/images/feedback.svg" class="feedback-image">
+            </div>
+
+        </div>
+
+
+        <div class="statistics">
+            <div class="statistics-text">
+                Пользователь также видит свою статистику в виде графика.Теперь пользователь может поделиться своими
+                успехами
+                в Facebook и общаться в группе социальной сети не покидая интерфейса приложения Balancd.
+            </div>
+            <div class="statistics-image">
+                <img src="/images/stats.svg">
+            </div>
+        </div>
+
+    </div>
+    
+    <!-- 
+    <div class="solution">
+        <h2 class="solution-title">
+            Решение
+        </h2>
+
+        <div class="solution-text">
+            Проектом занималась команда из 7 человек (руководитель проекта, дизайнер, Android, iOS, frontend и backend
+            разработчики, инженер по качеству). Android версия приложения создана на Kotlin (язык, объявленный Google
+            одним из самых приоритетным языком программирования для Android весной 2019). Одной из особенностей проекта
+            является то, что целевая аудитория - пожилые люди, так что удобство и простота использования приложения были
+            для нас ключевым моментом.
+        </div>
+
+        <div class="solution-technologies">
+            <span>Android:</span> Kotlin <span>iOS:</span> Swift <span>Web:</span> ReactJS <span>Server:</span>
+            Express.js
+        </div>
+    </div>
+
+    <div class="challenges">
+        <h2 class="challenges-title">
+            Challenges
+        </h2>
+        <div class="challenges-text">
+            Алгоритм распределения тренировок довольно непростой, так как существует жёсткая схема распределения
+            упражнений по уровням сложностей на основе опроса пользователей и их фидбеку после упражнений. Также мы
+            приобрели опыт в локализации приложений на китайский (если быть точнее, на его кантонский диалект, и заодно
+            узнали, что такой существует).
+        </div>
+    </div>
+
+    <div class="slider">
+        <img src="/images/slider.svg" alt="slider">
+    </div>
+
+    <div class="development">
+        <h2 class="development-title">
+            Развитие
+        </h2>
+        <div class="development-text">
+            Приложение тестируется пилотной группой в Испании, Норвегии и Гонконге. Заказчик презентовала проект в
+            Европейской ассоциации Шаолинь и для руководителей Неправительственных организаций Гонконга и получила
+            поддержку. В ближайшее время свои занятия с приложением Balancd начнут группы пожилых людей во всех районах
+            Гонконга.
+        </div>
+    </div>
+
+    <div class="development-image">
+    </div>
+
+    <div class="review">
+
+        <h2 class="review-title">
+            Отзыв
+        </h2>
+
+        <div class="review-name">
+            Сара Чунг, владелец приложений Balancd:
+        </div>
+
+
+        <div class="square">
+
+            <div class="review-text">
+                “Citronium активно взаимодействует со всеми заинтересованными сторонами. Хорошо организованная работа
+                позволяет им глубоко погружаться в процесс разработки и предоставлять важную техническую консультацию,
+                когда
+                она особенно необходима. Citronium нанимает высококвалифицированных специалистов, с которыми приятно
+                работать. Как и в любых проектах, людям требуется время, чтобы узнать друг друга, но наши команды быстро
+                притёрлись и начали работать сообща. Благодаря выделенным руководителям проектов, нам удалось продумать
+                всё
+                до мелочей и собрать реальный фидбек пользователей. Это здорово, что их команда находит и устраняет все
+                причины недостатков. Когда необходимо, они дают рекомендации по продукту и предлагают креативные
+                решения”.
+            </div>
+        </div> 
+
+    </div>-->
+
+
+
+
+
+</body>
+
+</html>
