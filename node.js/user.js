@@ -11,3 +11,5 @@ User.prototype.hello = function(who) {
 console.log("user.js is required");
 
 exports.User = User;
+
+// console.log(module); //  У меня почему-то абсолютные пути, а в видео относительные (видео 6)
