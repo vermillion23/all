@@ -1,3 +1,3 @@
-import { run } from './server';
+var server = require('./server');
 
-run();
+server.run();
