@@ -1,10 +1,10 @@
-import { combineReducers } from "redux";
-import store from './store';
-import todoStore from './todoStore';
+import {combineReducers, createStore} from "redux";
+import count from './store';
+import todo from './todoStore';
 
 const todoApp = combineReducers( {
-    store,
-    todoStore
-})
+    count,
+    todo
+});
 
-export default todoApp
+export default createStore(todoApp, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());

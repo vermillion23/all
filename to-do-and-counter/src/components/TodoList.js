@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
 import TodoListIt from "./TodoListIt"
+import {addTodo} from "../actionsReducers/todoStore";
 
 
 export default class TodoList extends Component {
@@ -13,6 +14,7 @@ export default class TodoList extends Component {
         //         {id: 2, value: 'Close door'},
         //         ]
         // }
+
 
 
     // add = (text) => {
@@ -36,22 +38,14 @@ export default class TodoList extends Component {
 
 
     render() {
-        // const {todos} = this.state;
-
         return (
             <div>
-                <h1>
-                    My Todo list
-                </h1>
+                <input type="text"
 
-               {/*<TodoListItem addItem={this.add}/>*/}
-               {/* <TodoListIt store={todoStore}/>*/}
+               placeholder="Add new"
 
-                <ul>
-                    {/*{*/}
-                    {/*    todos.map(todo => <li key={todo.id}>{todo.value}</li>)*/}
-                    {/*}*/}
-                </ul>
+                />
+                {/*<TodoListIt/>*/}
 
             </div>
         );

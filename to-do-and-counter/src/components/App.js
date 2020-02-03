@@ -1,27 +1,29 @@
 import React, {Component} from 'react';
 import Counter from './Counter';
-import {Provider, connect} from "react-redux";
-import {createStore} from "redux";
-import countState from "../actionsReducers/store";
+import {Provider} from "react-redux";
+import store from "../actionsReducers";
 import TodoList from './TodoList';
-import createItem from '../todoStore';
 import TodoListIt from './TodoListIt';
 
+class App extends Component {
+        // state = {
+        //     todos: [
+        //         {id: 1, value: 'Buy Milk'},
+        //         {id: 2, value: 'Close door'},
+        //     ]
+        // };
+    render() {
+        return (
+            <div>
 
-// const store = createStore(countState, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
-const todoStore = createStore(createItem);
 
-    function App() {
-  return (
-    <div>
+                <Counter />
+                <TodoList />
+                    <TodoListIt />
+            </div>
 
-        <Provider store={todoStore}>
-        <Counter />
-        <TodoList />
-            <TodoListIt />
-        </Provider>
-    </div>
-  );
+        );
+    }
 }
 
-export default App;
+export default (App)

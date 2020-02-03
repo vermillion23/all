@@ -7,7 +7,6 @@ class Counter extends Component {
     // onClickIncr = () => {
     //     this.props.incr();
     // } для дебага
-
     render () {
         const {countState, incr, decr} = this.props;
         return (
@@ -31,12 +30,17 @@ class Counter extends Component {
 
 //Reducer below
 const mapStateToProps = (state) => ({
-    countState: state,
+    countState: state.count,
 });
 
 const mapDispatchToProps = {
     incr: countActions.increment,
     decr: countActions.decrement,
 };
+//
+// const state = {
+//     count: 0,
+//     todo: {}
+// };
 //функция коннект принимает 2 параметра и возвращает функци, которую мы сразу вызываем и засовываем туда наш компонент. HOC high order component вызывает другой компонент в качестве аргумента
 export default connect(mapStateToProps, mapDispatchToProps)(Counter);

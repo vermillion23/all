@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import * as countActions from '../todoStore';
+import * as countActions from '../actionsReducers/todoStore';
 import {connect} from "react-redux";
 
 class TodoListIt extends Component {
@@ -18,18 +18,25 @@ class TodoListIt extends Component {
     //     addItem(this.state.value)
     // }
 
+    // addItem = () => {
+    //     console.log("hi")
+    // }
+
     render() {
-        const {createItem, addItem} = this.props;
+        const {createItem, addItem, text} = this.props;
+        let input
+
         return (
             <div>
-                <input type="text"
-                       // onChange={this.onLabelChange}
-                       placeholder="Add new"
+                {/*<input type="text"*/}
+                {/*    // onChange={this.onLabelChange}*/}
+                {/*       placeholder="Add new"*/}
 
-                />
+                {/*/>*/}
 
+                {/*<li value={createItem}></li>*/}
                 <button onClick={addItem}> Add </button>
-                <input readOnly value={createItem}/>
+               <br/> <input value={createItem}/>
 
             </div>
         )
@@ -37,12 +44,14 @@ class TodoListIt extends Component {
     }
 }
 
-const mapStateToProps = (state) => ( {
-    createItem: state,
-})
+const mapStateToProps = (state) => {
+    return {
+        createItem: state.todo,
+    }
+}
 
 const mapDispatchToProps = {
-    addItem: countActions.add,
+    addItem: countActions.addTodo,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(TodoListIt);

@@ -1,5 +1,3 @@
-import {createStore, CreateStore} from 'redux';
-
 // функция которая всегда принимает 2 параметра, текущее состояние state, и action = {type: '', payload: }
 export default function countState(state = 0, action) {
     switch (action.type) {
