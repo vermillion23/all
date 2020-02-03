@@ -36,15 +36,14 @@ export default class TodoList extends Component {
     //
     // };
 
+    // onTextChange = () => {
+    //     console.log('hi');
+    // }
 
     render() {
         return (
             <div>
-                <input type="text"
 
-               placeholder="Add new"
-
-                />
                 {/*<TodoListIt/>*/}
 
             </div>

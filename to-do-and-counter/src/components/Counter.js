@@ -32,12 +32,26 @@ class Counter extends Component {
 const mapStateToProps = (state) => ({
     countState: state.count,
 });
+ // или
+// const mapStateToProps = (state) => {
+//     return {
+//         counter: state
+//     };
+// };
+
+// const mapDispatchToProps = (dispatch) => {
+//     return {
+//         incr: () => dispatch(incr()),
+//         decr: () => dispatch(decr())
+//     }
+// }
 
 const mapDispatchToProps = {
     incr: countActions.increment,
     decr: countActions.decrement,
 };
-//
+
+
 // const state = {
 //     count: 0,
 //     todo: {}

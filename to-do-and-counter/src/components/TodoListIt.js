@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import * as countActions from '../actionsReducers/todoStore';
-import {connect} from "react-redux";
+import * as todoActions from '../actionsReducers/todoStore';
+import {connect} from 'react-redux';
 
 class TodoListIt extends Component {
 
@@ -18,13 +18,21 @@ class TodoListIt extends Component {
     //     addItem(this.state.value)
     // }
 
-    // addItem = () => {
-    //     console.log("hi")
+    // addItem1 = (item) => {
+    //     console.log('item')
+    // }
+
+    // onTextChange = () => {
+    //     console.log('hit');
+    // }
+
+    // handleChange(event) {
+    //     console.log('ioj')
     // }
 
     render() {
         const {createItem, addItem, text} = this.props;
-        let input
+
 
         return (
             <div>
@@ -35,8 +43,13 @@ class TodoListIt extends Component {
                 {/*/>*/}
 
                 {/*<li value={createItem}></li>*/}
-                <button onClick={addItem}> Add </button>
-               <br/> <input value={createItem}/>
+                <input type="text"
+                       placeholder="Add new"
+                       // onChange={handleChange}
+                />
+                <button onClick={() => addItem('hi')}> Add </button>
+               <br/> <input value={createItem}
+                            />
 
             </div>
         )
@@ -50,8 +63,14 @@ const mapStateToProps = (state) => {
     }
 }
 
-const mapDispatchToProps = {
-    addItem: countActions.addTodo,
-};
+ const mapDispatchToProps = {
+     addItem: (item) => todoActions.addTodo(item),
+ };
+
+/*const mapDispatchToProps = (dispatch) => {
+    return {
+        addItem: (item) => dispatch(todoActions.addTodo(item))
+    }
+}*/
 
 export default connect(mapStateToProps, mapDispatchToProps)(TodoListIt);
