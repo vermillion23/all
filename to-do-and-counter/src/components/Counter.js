@@ -9,10 +9,10 @@ class Counter extends Component {
     // } для дебага
 
     render () {
-        const {wow, incr, decr} = this.props;
+        const {countState, incr, decr} = this.props;
         return (
             <div>
-                <input readOnly value={wow}/>
+                <input readOnly value={countState}/>
 
                 <button onClick={incr}>
                 {/*    <button onClick={this.onClickIncr}> для дебага*/}
@@ -31,7 +31,7 @@ class Counter extends Component {
 
 //Reducer below
 const mapStateToProps = (state) => ({
-    wow: state,
+    countState: state,
 });
 
 const mapDispatchToProps = {
