@@ -1,31 +1,10 @@
 import React, { Component } from 'react';
 import * as todoActions from '../actionsReducers/todoStore';
 import {connect} from 'react-redux';
+import {TodoListItem} from "./TodoListItemm";
 
-class TodoListIt extends Component {
+class TodoList extends Component {
 
-    state = {
-        value: ''
-    };
-
-    onLabelChange = (e) => {
-        e.preventDefault();
-        console.log(e.target.value);
-        this.setState({value: e.target.value})
-    };
-
-    // onClick = () => {
-    //     const {addItem} = this.props;
-    //     addItem(this.state.value)
-    // }
-
-    // addItem = (item) => {
-    //     console.log('item')
-    // }
-
-    // onTextChange = () => {
-    //     console.log('hit');
-    // }
 
     handleChange = (e) => {
         const {changeInputValue} = this.props;
@@ -33,14 +12,13 @@ class TodoListIt extends Component {
     };
 
     addItem = (e) => {
-        const {addItem, inputValue} = this.props;
-        console.log(this.props)
-        addItem(inputValue);
+        const {addItem, inputValue, nextId} = this.props;
+        addItem({value: inputValue, id: nextId});
     };
 
     render() {
-        const {inputValue, todos} = this.props;
-
+        const {inputValue, todos, deleteItem} = this.props;
+        console.log(todos)
 
         return (
             <div>
@@ -57,10 +35,12 @@ class TodoListIt extends Component {
                        onChange={this.handleChange}
                 />
                 <button onClick={this.addItem}> Add </button>
-                {/*<button onClick={this.addItem('hi')}> Add </button>*/}
 
                <ul>
-                   {todos.map((todo, index) => <li key={index}>{todo}</li>)}
+                   {todos.map((todo) =>
+                       <TodoListItem key={todo.id} {...todo} deleteItem={deleteItem}/>)
+                   }
+
                </ul>
 
             </div>
@@ -73,13 +53,15 @@ const mapStateToProps = (state) => {
     return {
         todos: state.todo.data,
         inputValue: state.todo.inputValue,
+        nextId: state.todo.nextId,
+        id: state.todo.id
     }
 }
 
  const mapDispatchToProps = {
      addItem: todoActions.addTodo,
      changeInputValue: todoActions.changeInputValue,
-
+     deleteItem: todoActions.deleteItem
  };
 
 // the function above or:
@@ -89,4 +71,4 @@ const mapStateToProps = (state) => {
 //     }
 // }
 
-export default connect(mapStateToProps, mapDispatchToProps)(TodoListIt);
+export default connect(mapStateToProps, mapDispatchToProps)(TodoList);
