@@ -4,21 +4,22 @@ import {connect} from 'react-redux';
 
 class TodoListIt extends Component {
 
-    // state = {
-    //     value: ''
-    // }
-    // onLabelChange = (e) => {
-    //     e.preventDefault();
-    //     console.log(e.target.value);
-    //     this.setState({value: e.target.value})
-    // }
+    state = {
+        value: ''
+    };
+
+    onLabelChange = (e) => {
+        e.preventDefault();
+        console.log(e.target.value);
+        this.setState({value: e.target.value})
+    };
 
     // onClick = () => {
     //     const {addItem} = this.props;
     //     addItem(this.state.value)
     // }
 
-    // addItem1 = (item) => {
+    // addItem = (item) => {
     //     console.log('item')
     // }
 
@@ -26,12 +27,19 @@ class TodoListIt extends Component {
     //     console.log('hit');
     // }
 
-    // handleChange(event) {
-    //     console.log('ioj')
-    // }
+    handleChange = (e) => {
+        const {changeInputValue} = this.props;
+        changeInputValue(e.target.value)
+    };
+
+    addItem = (e) => {
+        const {addItem, inputValue} = this.props;
+        console.log(this.props)
+        addItem(inputValue);
+    };
 
     render() {
-        const {createItem, addItem, text} = this.props;
+        const {inputValue, todos} = this.props;
 
 
         return (
@@ -45,11 +53,15 @@ class TodoListIt extends Component {
                 {/*<li value={createItem}></li>*/}
                 <input type="text"
                        placeholder="Add new"
-                       // onChange={handleChange}
+                       value={inputValue}
+                       onChange={this.handleChange}
                 />
-                <button onClick={() => addItem('hi')}> Add </button>
-               <br/> <input value={createItem}
-                            />
+                <button onClick={this.addItem}> Add </button>
+                {/*<button onClick={this.addItem('hi')}> Add </button>*/}
+
+               <ul>
+                   {todos.map((todo, index) => <li key={index}>{todo}</li>)}
+               </ul>
 
             </div>
         )
@@ -59,18 +71,22 @@ class TodoListIt extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        createItem: state.todo,
+        todos: state.todo.data,
+        inputValue: state.todo.inputValue,
     }
 }
 
  const mapDispatchToProps = {
-     addItem: (item) => todoActions.addTodo(item),
+     addItem: todoActions.addTodo,
+     changeInputValue: todoActions.changeInputValue,
+
  };
 
-/*const mapDispatchToProps = (dispatch) => {
-    return {
-        addItem: (item) => dispatch(todoActions.addTodo(item))
-    }
-}*/
+// the function above or:
+// const mapDispatchToProps = (dispatch) => {
+//     return {
+//         addItem: (item) => dispatch(todoActions.addTodo(item))
+//     }
+// }
 
 export default connect(mapStateToProps, mapDispatchToProps)(TodoListIt);

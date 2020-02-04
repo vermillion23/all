@@ -11,18 +11,42 @@
 // ]
 // функция которая всегда принимает 2 параметра, текущее состояние state, и action = {type: '', payload: }
 
-export default function createItem(state  = [], action = {}) {
+// export default function createItem(state  = '', action = {}) {
+//     switch (action.type) {
+//         case 'todo/ADD_ITEM':
+//             return action.item;
+//         case 'todo/CHANGE':
+//             return action.item;
+//         default:
+//             return state
+//     }
+// }
 
+const initialState = {
+    data: [],
+    inputValue: '',
+};
 
+export default function createItem(state  = initialState, action = {}) {
     switch (action.type) {
-        case 'ADDITEM':
-            return action.item
+        case 'todo/ADD_ITEM':
+            return {
+                ...state,
+                data: [...state.data, action.item],
+                inputValue: ''
+            };
+        case 'todo/CHANGE_INPUT_VALUE':
+            return {
+                ...state,
+                inputValue: action.inputValue
+            };
         default:
             return state
     }
 }
 
-export const addTodo = (item) => ({type: 'ADDITEM', item });
+export const addTodo = (item) => ({type: 'todo/ADD_ITEM', item });
+export const changeInputValue = (inputValue) => ({type: 'todo/CHANGE_INPUT_VALUE', inputValue });
 
 // export
 
