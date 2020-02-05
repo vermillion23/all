@@ -6,7 +6,7 @@ import {TodoListItem} from "./TodoListItemm";
 class TodoList extends Component {
 
 
-    handleChange = (e) => {
+       handleChange = (e) => {
         const {changeInputValue} = this.props;
         changeInputValue(e.target.value)
     };
@@ -16,8 +16,9 @@ class TodoList extends Component {
         addItem({value: inputValue, id: nextId});
     };
 
+
     render() {
-        const {inputValue, todos, deleteItem} = this.props;
+        const {inputValue, todos, deleteItem, editItem} = this.props;
         console.log(todos)
 
         return (
@@ -34,11 +35,17 @@ class TodoList extends Component {
                        value={inputValue}
                        onChange={this.handleChange}
                 />
+
                 <button onClick={this.addItem}> Add </button>
 
                <ul>
                    {todos.map((todo) =>
-                       <TodoListItem key={todo.id} {...todo} deleteItem={deleteItem}/>)
+                       <TodoListItem
+                           key={todo.id}
+                           {...todo}
+                           deleteItem={deleteItem}
+                           editItem={editItem}
+                       />)
                    }
 
                </ul>
@@ -54,14 +61,16 @@ const mapStateToProps = (state) => {
         todos: state.todo.data,
         inputValue: state.todo.inputValue,
         nextId: state.todo.nextId,
-        id: state.todo.id
+        id: state.todo.id,
+        // value: state.todo.value,
     }
 }
 
  const mapDispatchToProps = {
      addItem: todoActions.addTodo,
      changeInputValue: todoActions.changeInputValue,
-     deleteItem: todoActions.deleteItem
+     deleteItem: todoActions.deleteItem,
+     editItem: todoActions.editItem
  };
 
 // the function above or:

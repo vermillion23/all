@@ -1,8 +1,5 @@
 import React, {Component} from 'react';
 import Counter from './Counter';
-import {Provider} from "react-redux";
-import store from "../actionsReducers";
-import TodoList from './TodoList';
 import TodoListIt from './TodoListIt';
 
 class App extends Component {
@@ -18,7 +15,6 @@ class App extends Component {
 
 
                 <Counter />
-                <TodoList />
                     <TodoListIt />
             </div>
 

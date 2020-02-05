@@ -1,18 +1,16 @@
-
 const initialState = {
     nextId: 0,
     data: [],
-    inputValue: '',
-    isEdit: false
+    inputValue: ''
 };
 
 
-export default function createItem(state  = initialState, action = {}) {
+export default function createItem(state = initialState, action = {}) {
     switch (action.type) {
         case 'todo/ADD_ITEM':
             return {
                 ...state,
-                data: [...state.data, action.item ],
+                data: [...state.data, action.item],
                 inputValue: '',
                 nextId: state.nextId + 1,
             };
@@ -31,14 +29,19 @@ export default function createItem(state  = initialState, action = {}) {
         case 'todo/EDIT_ITEM':
             return {
                 ...state,
-                isEdit: true
+                // data: state.data.map(() => item.id === action.id),
+                data: state.data.map((item) => (item.id === action.id) ?
+                    ({...item, value: action.value})
+                    :
+                    item
+                ),
             }
         default:
             return state
     }
 }
 
-export const addTodo = (item) => ({type: 'todo/ADD_ITEM', item });
-export const changeInputValue = (inputValue) => ({type: 'todo/CHANGE_INPUT_VALUE', inputValue });
+export const addTodo = (item) => ({type: 'todo/ADD_ITEM', item});
+export const changeInputValue = (inputValue) => ({type: 'todo/CHANGE_INPUT_VALUE', inputValue});
 export const deleteItem = (id) => ({type: 'todo/DELETE_ITEM', id});
-export const isEdit = () => ({type: 'todo/EDIT_ITEM', })
+export const editItem = (id, value) => ({type: 'todo/EDIT_ITEM', id, value});
