@@ -1,19 +1,19 @@
 import React, {Component} from 'react';
 import Counter from './Counter';
 import TodoListIt from './TodoListIt';
+import Form from './Form';
 
 class App extends Component {
-        // state = {
-        //     todos: [
-        //         {id: 1, value: 'Buy Milk'},
-        //         {id: 2, value: 'Close door'},
-        //     ]
-        // };
+
     render() {
+
+        const {inputValue, emailValue} = this.props;
+
         return (
             <div>
 
 
+                <Form/>
                 <Counter />
                     <TodoListIt />
             </div>

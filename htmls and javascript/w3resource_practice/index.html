@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+
+
+<body onload="animate_string('target')"
+    <pre id="target"> very cool text </pre>
+    <script>
+        function animate_string(id)
+        {
+            const element = document.getElementById(id);
+            const textNode = element.childNodes[0]; // assuming no other children
+            let text = textNode.data;
+
+            setInterval(() => {
+                text = text[text.length - 1] + text.substring(0, text.length - 1);
+                textNode.data = text;
+            }, 100);
+        }
+
+    </script>
+
+    <!-- 
+<h1 style="color: black">JavaScript date object : getMinutes() method</h1>
+<hr />
+<button onclick="print_page()">Print page</button>
+
+<script>
+    function print_page()
+    {window.print()};
+</script>
+ -->
+
+
+</body>
+
+</html>

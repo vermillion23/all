@@ -8,6 +8,7 @@ class TodoList extends Component {
 
        handleChange = (e) => {
         const {changeInputValue} = this.props;
+
         changeInputValue(e.target.value)
     };
 
