@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import FormUserDetails from './FormUserDetails';
+import FormPersonalDetails from './FormPersonalDetails';
 
 export class UserForm extends Component {
     state = {
@@ -37,9 +38,9 @@ export class UserForm extends Component {
     render() {
         const { step } = this.state;
         const { firstName, lastName, occupation, email, city, bio } = this.state;
-        const values = { firstName, lastName, occupation, email, city, bio }
+        const values = { firstName, lastName, email, occupation, city, bio };
 
-        switch(step) {
+        switch (step) {
             case 1:
                 return (
                     <FormUserDetails
@@ -47,15 +48,24 @@ export class UserForm extends Component {
                         handleChange={this.handleChange}
                         values={values}
                     />
-                )
-                case2:
-                    return <h1>FormPersonalDetails</h1>
+                );
+
+            case 2:
+                return (
+                    <FormPersonalDetails
+                        nextStep={this.nextStep}
+                        prevStep={this.prevStep}
+                        handleChange={this.handleChange}
+                        values={values}
+                    />
+                 );
+
             case 3:
-                return <h1>Confirm</h1>
+                return <h1>Confirm</h1>;
             case 4:
-                return <h1>Success</h1>
+                return <h1>Success</h1>;
         }
     }
 }
 
-export default UserForm
+export default UserForm;
