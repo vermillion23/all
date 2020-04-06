@@ -46,12 +46,12 @@ section {
     /* display: -ms-flexbox; */
     /* display: flex; */
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
+    -ms-flex-pack: center;
     align-items: center;
     -ms-flex-direction: column;
-        flex-direction: column;
+    flex-direction: column;
     -ms-flex-pack: center;
-        justify-content: center;
+    justify-content: center;
 }
 
 .promo-section__content .promo-section__content_text {
@@ -96,7 +96,7 @@ section {
 }
 
 .title {
-    margin-top: 51px;
+    margin-top: 38px;
 }
 
 .features-text,
@@ -128,19 +128,16 @@ section {
 
 .additional {
     width: 1412px;
-    height: 334px;
+    height: auto;
     background: #F5F5F5;
     margin: 0 auto 104px auto;
 }
 
-.additional-appstore {
-    margin-top: 63px;
+.additional_text {
+    margin-bottom: 5%;
 }
 
-@media(min-width: 637px) {
-    
-}
-
+@media(min-width: 637px) {}
 
 @media(min-width: 768px) {
     .promo-section__demo {
@@ -172,8 +169,7 @@ section {
 @media(min-width: 1150px) {
     .promo-section__demo {
         height: 666px;
-    } 
-
+    }
     .section__demo_desktop {
         height: 666px;
         margin: 0 auto;
@@ -199,6 +195,6 @@ section {
 
 @media(min-width: 1920px) {
     .promo-section__content_text {
-    width: 1000px;
+        width: 1000px;
     }
 }
