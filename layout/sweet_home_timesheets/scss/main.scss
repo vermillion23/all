@@ -1,0 +1,96 @@
+@import "styles_reset";
+@font-face {
+    font-family: 'Montserrat', sans-serif;
+    src: url("./fonts/Montserrat-Regular")format("ttf"), url("./fonts/Montserrat-Bold")format("ttf");
+}
+
+.main {
+    background: #FFFFFF;
+    font: {
+        family: 'Montserrat', sans-serif;
+        style: normal;
+        weight: 400;
+        size: 20px;
+    }
+    line-height: 26px;
+    letter-spacing: 0.01em;
+    // .promo-block__logo {
+    //     flex-direction: row;
+    // }
+    .case-title {
+        margin-top: 10%;
+        margin-bottom: 5%;
+        font-size: 50px;
+        line-height: 52px;
+        align-items: center;
+        text-transform: uppercase;
+        color: #28A2D5;
+    }
+    .promo-block__logo img,
+    .objective-block__img img,
+    .promo-block__img img,
+    .challenges-block__img img {
+        max-width: 100%;
+        margin-top: 5%;
+    }
+    .promo-block {
+        &:before {
+            background: url(../images/promo-background.svg) no-repeat;
+            background-size: 100%;
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 170%;
+        }
+    }
+    .promo-block__img {
+        max-width: 1499px;
+        margin: 0 auto 0 auto;
+    }
+    .promo-block__img img {
+        max-width: 100%;
+    }
+    .objective-block {
+        &:after {
+            background: url(../images/right-border.svg) no-repeat left;
+            content: '';
+            position: absolute;
+            top: 160%;
+            right: 0;
+            width: 7%;
+            height: 100%;
+        }
+    }
+    .challenges-block {
+        &:before {
+            background: url(../images/left-border.svg) no-repeat left;
+            background-size: 100%;
+            content: '';
+            position: absolute;
+            top: 231%;
+            left: -5%;
+            width: 16%;
+            height: 205%;
+        }
+    }
+    .challenges__img {
+        max-width: 1526px;
+        margin: 3% auto 0 auto;
+    }
+    .challenges__img img {
+        max-width: 100%;
+        // margin-left: 4%;
+    }
+    .features-block {
+        div:last-child {
+            text-transform: uppercase;
+        }
+        .features-block__text {
+            p {
+                margin-bottom: 3%;
+            }
+        }
+    }
+}
