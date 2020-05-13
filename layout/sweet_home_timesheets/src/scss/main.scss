@@ -1,7 +1,8 @@
 @import "styles_reset";
+@import "/src/scss/bootstrap.min.css";
 @font-face {
     font-family: 'Montserrat', sans-serif;
-    src: url("./fonts/Montserrat-Regular")format("ttf"), url("./fonts/Montserrat-Bold")format("ttf");
+    src: url("/fonts/Montserrat-Regular")format("ttf"), url("/fonts/Montserrat-Bold")format("ttf");
 }
 
 .main {
@@ -35,7 +36,7 @@
     }
     .promo-block {
         &:before {
-            background: url(../images/promo-background.svg) no-repeat;
+            background: url(/images/promo-background.svg) no-repeat;
             background-size: 100%;
             content: '';
             position: absolute;
@@ -54,7 +55,7 @@
     }
     .objective-block {
         &:after {
-            background: url(../images/right-border.svg) no-repeat left;
+            background: url(/images/right-border.svg) no-repeat left;
             content: '';
             position: absolute;
             top: 160%;
@@ -65,7 +66,7 @@
     }
     .challenges-block {
         &:before {
-            background: url(../images/left-border.svg) no-repeat left;
+            background: url(/images/left-border.svg) no-repeat left;
             background-size: 100%;
             content: '';
             position: absolute;
