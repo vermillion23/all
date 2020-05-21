@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/dr_julian.css">
+</head>
+
+<body>
+    <div class="swiper-outer swiper-custom">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img class="swiper_img" src="/images/screen_1.png" alt="картинка">
+                </div>
+                <div class="swiper-slide"><img class="swiper_img" src="/images/screen_2.png" alt="картинка">
+                </div>
+                <div class="swiper-slide"><img class="swiper_img" src="/images/screen_3.png" alt="картинка">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="swiper/swiper.js"></script>
+
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+
+            slidesPerView: 3,
+            spaceBetween: 20,
+            loop: true,
+            breakpoints: {
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 15,
+                },
+                650: {
+                    slidesPerView: 3,
+                    spaceBetween: 10,
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

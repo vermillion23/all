@@ -1,0 +1,41 @@
+.background {
+  background: url("/images/swiper-background.svg") no-repeat right;
+  background-size: contain;
+}
+
+.swiper-container {
+  max-width: 1388px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 642px;
+  margin: 50px 0;
+}
+
+.swiper-container .swiper-wrapper {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.swiper-container .swiper-scrollbar {
+  display: none;
+}
+
+.swiper-container .card {
+  width: auto;
+}
+
+.swiper-container .swiper-slide .image {
+  max-width: 314px;
+  height: auto;
+}
+
+.swiper-container .swiper-slide .image img {
+  max-width: 100%;
+}
+/*# sourceMappingURL=swiper.css.map */

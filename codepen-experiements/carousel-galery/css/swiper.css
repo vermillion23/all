@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.carousel-gallery {
+  margin: 50px 0;
+  padding: 0 30px;
+}
+
+.carousel-gallery .swiper-container {
+  height: 840px;
+}
+
+.carousel-gallery .swiper-wrapper {
+  background: url("/images/swiper-background.svg");
+  background-size: cover;
+}
+
+.carousel-gallery .swiper-slide a {
+  display: block;
+  width: 100%;
+  height: 632px;
+  position: relative;
+}
+
+.carousel-gallery .swiper-slide a:hover .image .overlay {
+  opacity: 1;
+}
+
+.carousel-gallery .swiper-slide a .image {
+  height: 100%;
+  background-size: fit-content;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.carousel-gallery .swiper-slide a .image .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(20, 20, 20, 0.8);
+  text-align: center;
+  opacity: 0;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+.carousel-gallery .swiper-slide a .image .overlay em {
+  color: #fff;
+  font-size: 26px;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  display: inline-block;
+}
+/*# sourceMappingURL=swiper.css.map */

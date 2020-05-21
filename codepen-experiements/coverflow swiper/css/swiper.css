@@ -1,0 +1,85 @@
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/*sliderSection styles*/
+
+#sliderSection {
+    padding: 40px 0;
+    background-color: #889fb5;
+}
+
+#sliderSection .section-title {
+    color: #ffffff;
+}
+
+#sliderSection .section-paragraph {
+    color: #f3f8ff;
+}
+
+.swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 40px;
+}
+
+.currency-pair {
+    font-family: latoregular;
+    font-weight: bold;
+    font-size: 23px;
+    color: #f3f8ff;
+    margin-bottom: 10px;
+    line-height: 26.6px;
+    letter-spacing: 0.01em;
+    padding: 0 10px;
+}
+
+.details {
+    margin-top: 10px;
+    padding: 0 10px;
+}
+
+.details p {
+    margin-bottom: 0;
+    line-height: 28px;
+    font-size: 20px;
+}
+
+.swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+}
+
+.swiper-pagination-bullet-active {
+    background: #f9a21c;
+}
+
+@media (min-width: 620px) {
+    .swiper-slide {
+        width: 600px;
+    }
+    .details,
+    .currency-pair {
+        padding: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .modal-dialog {
+        width: 91%;
+        margin: 30px auto;
+    }
+}
+
+
+/*# sourceMappingURL=swiper.css.map */
