@@ -1,32 +1,10 @@
 @import "styles_reset";
 @import "/src/scss/bootstrap.min.css";
-@font-face {
-    font-family: 'Montserrat', sans-serif;
-    src: url("/fonts/Montserrat-Regular")format("ttf"), url("/fonts/Montserrat-Bold")format("ttf");
-}
-
+@import "texts";
+@import "custom_swiper";
+@import "store_icons";
 .main {
     background: #FFFFFF;
-    font: {
-        family: 'Montserrat', sans-serif;
-        style: normal;
-        weight: 400;
-        size: 20px;
-    }
-    line-height: 26px;
-    letter-spacing: 0.01em;
-    // .promo-block__logo {
-    //     flex-direction: row;
-    // }
-    .case-title {
-        margin-top: 10%;
-        margin-bottom: 5%;
-        font-size: 50px;
-        line-height: 52px;
-        align-items: center;
-        text-transform: uppercase;
-        color: #28A2D5;
-    }
     .promo-block__logo img,
     .objective-block__img img,
     .promo-block__img img,
@@ -43,44 +21,96 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 170%;
+            height: 80%;
         }
     }
     .promo-block__img {
+        display: block;
         max-width: 1499px;
         margin: 0 auto 0 auto;
     }
     .promo-block__img img {
         max-width: 100%;
     }
-    .objective-block {
-        &:after {
-            background: url(/images/right-border.svg) no-repeat left;
-            content: '';
+    .customer-block {
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        .customer-block__img img {
+            max-width: 100%;
+            @media (max-width: 414px) {
+                max-width: 140%;
+                margin: 0 -16%;
+            }
+        }
+    }
+    .heart {
+        .customer-block__heart {
             position: absolute;
-            top: 160%;
+            top: 25%;
             right: 0;
-            width: 7%;
-            height: 100%;
+            z-index: 0;
+            @media (max-width: 414px) {
+                overflow: hidden;
+                width: 140px;
+                height: 400px;
+                top: 22%;
+                right: 0;
+            }
         }
     }
-    .challenges-block {
-        &:before {
-            background: url(/images/left-border.svg) no-repeat left;
-            background-size: 100%;
-            content: '';
-            position: absolute;
-            top: 231%;
-            left: -5%;
-            width: 16%;
-            height: 205%;
+    .background-image__left-border {
+        position: absolute;
+        margin-top: -40%;
+        left: 0;
+        z-index: 0;
+        @media(max-width: 1440px) {
+            left: -6%;
+        }
+        @media(max-width: 1240px) {
+            margin-top: -92%;
+            left: -10%;
+        }
+        @media(max-width: 1024px) {
+            display: none;
         }
     }
-    .challenges__img {
+    .case-desktop {
+        display: block;
+        @media(max-width: 767px) {
+            display: none;
+        }
+    }
+    .case-mobile {
+        display: none;
+        @media(max-width: 767px) {
+            display: block;
+        }
+    }
+    .background-image__right-border {
+        position: absolute;
+        margin-top: -47%;
+        right: 0;
+        z-index: 0;
+        @media(max-width: 1240px) {
+            margin-top: -66%;
+        }
+        @media(max-width: 1024px) {
+            display: none;
+        }
+    }
+    .solution-block__text {
+        z-index: 1;
+    }
+    .challenges_static {
+        display: block;
         max-width: 1526px;
         margin: 3% auto 0 auto;
+        @media (max-width: 768px) {
+            display: none;
+        }
     }
-    .challenges__img img {
+    .challenges_static img {
         max-width: 100%;
         // margin-left: 4%;
     }

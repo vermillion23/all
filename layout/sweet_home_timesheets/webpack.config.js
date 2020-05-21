@@ -1,8 +1,17 @@
 const path = require('path');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-    plugins: [new MiniCssExtractPlugin('main.css')],
+    plugins: [
+        new HTMLWebpackPlugin({
+            template: 'index.html',
+            minify: {
+                collapseWhitespace: true
+            }
+        }),
+        new MiniCssExtractPlugin('main.css')
+    ],
     entry: './src/app.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
